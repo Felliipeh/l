@@ -1,0 +1,198 @@
+/* acessa o elemento root e cria variaveis globais */
+:root { 
+    --primaria:#915f32;
+    --secuntaria:#ce9056;
+    --terciaria:;
+    --quartenaria:#e1e6eb;
+    --branco:white;
+    --preto:black;
+}
+
+/* acessa todos os elementos 
+remove todas as margens 
+remove todos os paddings
+calcula automaticamante a larguras considerando: conteudo,bordas
+margens e paddigns*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    font-family: "Special Elite", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.25rem;
+}
+/* seleciona o header E FOOTER 
+    coloca a cor de fundo 
+    e um espaçamento interno */
+
+header,footer{
+    background-color: var(--primaria);
+    padding: 1rem;
+}
+/* seleciona o nav
+coloca cor de fundo
+muda o display para grid
+cria uma grade em 5 colunas de largura igual
+alinha o texto no centro da coluna
+espaço entre as colunas e linhas do grid */
+/* Estilo para o nav */
+nav {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    gap: 20px; 
+    justify-content: space-around; 
+    align-items: center; 
+    background-color:var(--secuntaria);
+  height: 3rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--preto);
+    font-family: 'Special Elite', cursive;
+    display: flex;
+    align-items: center; 
+    gap: 8px; 
+    padding: 9px 15px; 
+}
+
+
+nav a img {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+}
+
+/* Adicionar uma pequena alteração ao passar o mouse sobre os links */
+nav a:hover {
+    background-color:var(--primaria);
+    border-radius: 5px;
+}
+
+
+  
+    
+h1{
+    position: relative;
+    left: 2rem;
+}
+/* seleciona todos os links dentro de navs
+remove a decoraçâo dos links
+muda a cor da letra
+e a exibição do ponteiro do mouse para uma mâo */
+
+/* qualquer item com essa class
+muda o display para flex
+coloca o espaco vazio da horizontal no meio dos elementos
+alinha o itens na vertical com base no seu centro */
+.logo-busca{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#form_busca {
+    position: relative;
+    width: 300px;
+}
+
+#busca {
+    width: 100%;
+    padding: 10px 40px 10px 80px; /* Espaço para o ícone da lupa */
+    border: 2px solid #000;
+    border-radius: 25px;
+    outline: none;
+    font-size: 14px;
+    background-color: var(--primaria);
+    color: white;
+}
+
+#btn_lupa {
+    position: absolute;
+    right: 16rem; /* Espaço entre o ícone e a borda do campo de entrada */
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.alinhar {
+    margin-right: 8px;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+main{
+    flex-grow: 1;
+  background-color: var(--quartenaria);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size:100% 100%;
+}
+.icon_facebook,
+.ICONE_insta,
+.TELEFONE {
+    background-color: var(--primaria);
+    height: 10vh;
+    width: 10vh;
+    position: relative;
+    left: 88vh;
+    top: 6REM;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4rem;
+}
+
+.icon_facebook a,
+.ICONE_insta a,
+.TELEFONE a {
+    text-decoration: none;
+    color: var(--preto);
+    cursor: pointer;
+    color: black;
+}
+
+H2 {
+    text-align: center;
+    font-size: 3REM;
+    text-decoration: solid;
+    color: black;
+}
+
+
+.icon_facebook {
+    text-decoration: none;
+    color: var(--preto);
+    cursor: pointer;
+
+}
+
+.h3 {
+    margin-top: 10rem;
+}
+.rede_social {
+    position: relative;
+    left: 1rem;
+}
+
+footer{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    text-align:center;
+
+}
+.rede_social{
+    position: relative;
+left: 1rem;
+}
+#copy {
+    text-align:start;
+}

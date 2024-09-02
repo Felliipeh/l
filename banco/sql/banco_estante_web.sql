@@ -1,0 +1,16 @@
+CREATE DATABASE estante_web;
+use estante_web;
+
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    senha VARCHAR(255) NOT NULL,
+    foto_perfil VARCHAR(255)
+);
+
+CREATE TABLE LOGIN (
+    id_usuario INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    senha VARCHAR(255) NOT NULL
+);
